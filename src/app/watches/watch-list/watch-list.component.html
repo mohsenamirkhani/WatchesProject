@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row fixed-top">
+    <div class="col-sm-6 offset-sm-2 pt-3">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">filter</span>
+        </div>
+        <input type="text" [(ngModel)]="filteredWatches" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 100px">
+    <h2 style="margin-left: 30px;">Hot Deals</h2>
+    <div class="card-group scroll">
+      <div *ngFor="let w of this.watchesService.watches | filter:filteredWatches">
+        <app-watch-item [watch]="w" (click)="onWatchClick(w.id)"></app-watch-item>
+      </div>
+    </div>
+  </div>
+</div>

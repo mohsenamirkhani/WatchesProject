@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <img [src]="watch.pictures[1]" [alt]="watch.name">
+    </div>
+    <div class="col-sm-6 border-left">
+      <div class="float-right" (click)="backToRoot()">exit</div>
+      <h4>{{watch.brand}}</h4>
+      <h5>{{watch.status}}</h5>
+      <a class="card-title" style="color: #00708a;">Rent for {{(watch.cost / 90).toFixed(2)}}</a><br>
+      <a class="card-text" style="color: #00708a;">buy for {{watch.cost}}</a>
+      <p>{{watch.description}}</p>
+      <hr />
+      <div class="row">
+        <div class="col-sm-6">
+          <h5 class="text-muted">Brand</h5>
+          <h6>{{watch.brand}}</h6>
+          <h5 class="text-muted">Band</h5>
+          <h6>{{watch.band_type}}</h6>
+          <h5 class="text-muted">Band Material</h5>
+          <h6>{{watch.band_material}}</h6>
+        </div>
+        <div class="col-sm-6">
+          <h5 class="text-muted">Bezel</h5>
+          <h6>{{watch.bezel}}</h6>
+          <h5 class="text-muted">Case Diameter</h5>
+          <h6>{{watch.case_diameter}}</h6>
+          <h5 class="text-muted">Case Material</h5>
+          <h6>{{watch.case_material}}</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2"></div>
+        <button class="btn btn-dark btn-lg m-5 custome-button">Rent</button>
+        <button class="btn btn-outline-dark btn-lg m-5 custome-button-outline">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>

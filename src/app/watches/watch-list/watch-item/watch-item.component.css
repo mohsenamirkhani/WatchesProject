@@ -1,0 +1,9 @@
+.border {
+    border: 1px solid #555;
+}
+
+img {
+    border-radius: 5%;
+    padding: 10px;
+    
+}

@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;" class="m-4">
+  <div class="border">
+
+    <img class="card-img-top" width="200" height="auto" [src]="watch.pictures[0]" [alt]="watch.name">
+    <div class="card-body">
+      <h5 class="card-title">Rent from {{(watch.cost / 90).toFixed(2)}} per day</h5>
+      <p class="card-text">buy as low as {{watch.cost}}</p>
+      <p class="card-text">{{watch.brand}} | {{watch.model}}</p>
+    </div>
+  </div>
+</div>
