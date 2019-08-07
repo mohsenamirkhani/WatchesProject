@@ -12,7 +12,7 @@
   </div>
   <div style="margin-top: 100px">
     <h2 style="margin-left: 30px;">Hot Deals</h2>
-    <div class="card-group scroll">
+    <div id="parent">
       <div *ngFor="let w of this.watchesService.watches | filter:filteredWatches">
         <app-watch-item [watch]="w" (click)="onWatchClick(w.id)"></app-watch-item>
       </div>

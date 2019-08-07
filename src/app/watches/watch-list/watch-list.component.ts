@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class WatchListComponent implements OnInit {
 
   public filteredWatches = '';
+  public sizeOfElements = 0;
   constructor(public watchesService: WatchesService, private router: Router) { }
 
   ngOnInit() {
@@ -19,6 +20,9 @@ export class WatchListComponent implements OnInit {
         result.forEach(element => {
           this.watchesService.watches.push(element);
         });
+        const parent = document.getElementById('parent');
+        parent.style.height = ((result.length / 4) * 515).toString() + 'px';
+        console.log((result.length / 4) * 600);
       },
       (error) => {
         console.log(error);

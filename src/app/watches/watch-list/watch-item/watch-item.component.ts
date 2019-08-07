@@ -12,7 +12,6 @@ export class WatchItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.watch);
   }
 
 }
